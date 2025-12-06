@@ -1,3 +1,4 @@
+import MainNavbar from "../Navbar/MainNavbar";
 import SecondaryNavbar from "../Navbar/SecondaryNavbar";
 
 
@@ -8,7 +9,7 @@ const MainLayout = ({ children }) => {
       <SecondaryNavbar />
       
       {/* Secondary Navbar */}
-
+       <MainNavbar/>
 
       {/* Page content */}
       <main>{children}</main>

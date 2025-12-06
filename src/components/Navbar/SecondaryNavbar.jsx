@@ -11,7 +11,7 @@ import { IoIosMail } from "react-icons/io";
 function SecondaryNavbar() {
   return (
     <div className="open-sans bg-[#FFF4EE] text-black">
-      {/* ----------- DESKTOP VERSION (lg) ----------- */}
+      {/* ----------- DESKTOP VERSION  ----------- */}
       <div className="hidden lg:h-10 lg:flex justify-between items-center mx-12 py-2.5">
         {/* Left Icons */}
         <div className="flex items-center gap-5 text-black text-xl">
