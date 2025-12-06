@@ -5,6 +5,13 @@ import giftCard from '../../assets/navabar/gift-card.png';
 import Cart from '../../assets/navabar/cart.png';
 import Search from '../../assets/navabar/search.png';
 
+/* Tablet and phone react icons  */
+import { RxHamburgerMenu } from "react-icons/rx";
+import { CgProfile } from "react-icons/cg";
+import cart from "../../assets/navabar/cart.png"
+import { IoIosSearch } from "react-icons/io";
+import logo from "../../assets/Logo/logo.png"
+
 function MainNavbar() {
   return (
     <div className="open-sans bg-white text-black">
@@ -23,7 +30,7 @@ function MainNavbar() {
 
           {/* Christmas with tree image */}
           <p className="flex items-center gap-[5px]">
-            Christmas
+            Christmas Trees
             <img src={tree} alt="tree" className="w-4 h-4" />
           </p>
 
@@ -64,6 +71,37 @@ function MainNavbar() {
           </div>
         </div>
       </div>
+
+
+
+
+
+      {/* Tablet and mobile screen */}
+      <div className="block lg:hidden my-10 mx-4">
+      <div className="flex justify-between items-center">
+        
+        {/* Left: Hamburger + Profile */}
+        <div className="flex items-center gap-5">
+          <RxHamburgerMenu className="text-2xl cursor-pointer" />
+          <CgProfile className="text-2xl cursor-pointer" />
+        </div>
+
+        {/* Center: Logo */}
+        <div className="flex items-center justify-center">
+          <img src={logo} alt="Logo" className="h-12 object-contain" />
+        </div>
+
+        {/* Right: Cart + Search */}
+        <div className="flex items-center gap-5">
+          <div className="flex items-center gap-[5px] cursor-pointer">
+            <img src={cart} alt="Cart" className="w-6 h-6" />
+            <span className="text-sm font-semibold">0</span>
+          </div>
+          <IoIosSearch className="text-2xl cursor-pointer" />
+        </div>
+
+      </div>
+    </div>
     </div>
   );
 }

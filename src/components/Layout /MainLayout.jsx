@@ -10,6 +10,7 @@ const MainLayout = ({ children }) => {
       
       {/* Secondary Navbar */}
        <MainNavbar/>
+       
 
       {/* Page content */}
       <main>{children}</main>
