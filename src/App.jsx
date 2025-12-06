@@ -1,12 +1,13 @@
 import "./App.css";
 import MainLayout from "./components/Layout /MainLayout";
-import SecondaryNavbar from "./components/Navbar/SecondaryNavbar";
+import Hero from "./components/Hero/Hero"
 
 
 function App() {
   return (
     <MainLayout>
       {/* Hero section */}
+      <Hero/>
     </MainLayout>
   );
 }
