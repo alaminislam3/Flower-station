@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { heroData } from "./HeroData";
 import HeroTabs from "./HeroTabs";
 export default function HeroMobile() {
@@ -17,6 +17,14 @@ export default function HeroMobile() {
     { name: "Ecuadorian", image: "/src/assets/Mobile slider/7.jpg" },
     { name: "Gifting", image: "/src/assets/Mobile slider/8.webp" },
   ];
+
+  useEffect(() => {
+      const interval = setInterval(() => {
+        setActive((prev) => (prev + 1) % heroData.length);
+      }, 4000);
+      
+      return () => clearInterval(interval);
+    }, []);
 
   return (
     <div className="w-full">

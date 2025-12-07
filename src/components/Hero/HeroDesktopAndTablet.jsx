@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import HeroTabs from "./HeroTabs";
 import { heroData } from "./HeroData";
 import logo from "../../assets/Logo/logo.png"
@@ -8,14 +8,14 @@ export default function HeroDesktopAndTablet() {
   const [active, setActive] = useState(0);
   const slide = heroData[active];
 
-  // Auto-change tabs every 3 seconds
- /*  useEffect(() => {
+  // Auto-change tabs every 4 seconds
+  useEffect(() => {
     const interval = setInterval(() => {
       setActive((prev) => (prev + 1) % heroData.length);
-    }, 3000);
+    }, 4000);
     
     return () => clearInterval(interval);
-  }, []); */
+  }, []);
 
   return (
     <div className="relative w-full h-[382px]">
