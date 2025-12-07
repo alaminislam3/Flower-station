@@ -33,7 +33,10 @@ export default function Hero() {
             {/* Title, Button and Text */}
             <div className="flex flex-col gap-4">
               {/* Title */}
-              <h1 className="text-4xl font-semibold whitespace-pre-line leading-snug">
+              <h1 
+                className="frank text-4xl font-semibold whitespace-pre-line leading-snug"
+                style={{ color: slide.titleColor }}
+              >
                 {slide.title}
               </h1>
 
@@ -52,7 +55,10 @@ export default function Hero() {
               </button>
 
               {/* Common text */}
-              <p className="text-[15px] leading-6">
+              <p 
+                className="text-[15px] leading-6"
+                style={{ color: slide.descColor }}
+              >
                 Order by 5pm for same day London* delivery <br />
                 or by 3pm for next day delivery UK*
               </p>
