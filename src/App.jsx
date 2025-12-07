@@ -1,4 +1,4 @@
-import "./App.css";
+import "./index.css";
 import MainLayout from "./components/Layout /MainLayout";
 import Hero from "./components/Hero/Hero"
 
