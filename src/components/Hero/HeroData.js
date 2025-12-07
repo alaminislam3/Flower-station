@@ -6,7 +6,7 @@ import hero4 from "../../assets/Hero/Hero4.png"
 export const heroData = [
   {
     id: 0,
-    title: `Hand-Picked\nFlowers By Us,\nPerfect For You`,
+    title: ` Hand-Picked\nFlowers By Us,\nPerfect For You`,
     buttonText: "All Flowers",
     buttonBg: "#59670D",
     buttonTextColor: "white",

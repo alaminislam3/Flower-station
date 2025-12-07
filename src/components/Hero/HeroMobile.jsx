@@ -47,19 +47,19 @@ export default function HeroMobile() {
         <div className="absolute inset-0 bg-black/50"></div>
 
         {/* Center Content */}
-        <div className="absolute inset-0 flex flex-col justify-center items-center gap-3">
+        <div className="absolute inset-0 flex flex-col  items-center">
           {/* Fixed White Title */}
-          <h1 className="frank text-[32px] font-semibold whitespace-pre-line text-white relative z-10">
+          <h1 className="frank text-[32px] font-semibold whitespace-pre-line text-white relative z-10 mt-[37px]">
             {slide.title}
           </h1>
 
           {/* Always White Button */}
-          <button className="w-full max-w-xs py-3 px-6 rounded font-medium shadow bg-white text-black relative z-10">
+          <button className="w-[200px] py-3 px-6 rounded font-medium shadow bg-white text-black relative z-10">
             {slide.buttonText}
           </button>
 
           {/* Tabs BELOW button *inside the hero image* */}
-          <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 z-10 w-full px-4 sm:px-0 sm:w-auto">
+          <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 z-10 w-full px-4 sm:px-0 sm:w-auto ">
             <HeroTabs active={active} setActive={setActive} />
           </div>
         </div>
