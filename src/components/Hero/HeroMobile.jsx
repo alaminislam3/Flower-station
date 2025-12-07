@@ -1,21 +1,31 @@
 import { useState, useEffect } from "react";
 import { heroData } from "./HeroData";
 import HeroTabs from "./HeroTabs";
+import imgOne from "../../assets/Mobile slider/1.png";
+import imgTwo from "../../assets/Mobile slider/2.png";
+import imgThree from "../../assets/Mobile slider/3.png";
+import imgFour from "../../assets/Mobile slider/4.png";
+import imgFive from "../../assets/Mobile slider/5.avif"
+import imgSix from "../../assets/Mobile slider/6.jpg";
+import imgSeven from "../../assets/Mobile slider/7.jpg";
+import imgEight from "../../assets/Mobile slider/8.webp"
+
+
 export default function HeroMobile() {
   const [active, setActive] = useState(0);
   const slide = heroData[active];
 
   const categories = [
-    { name: "All Flowers", image: "/src/assets/Mobile slider/1.png" },
-    { name: "Birthday", image: "/src/assets/Mobile slider/2.png" },
-    { name: "Virtues Flowers", image: "/src/assets/Mobile slider/3.png" },
-    { name: "Luxury", image: "/src/assets/Mobile slider/4.png" },
-    { name: "Letter", image: "/src/assets/Mobile slider/5.avif" },
-    { name: "Get Well", image: "/src/assets/Mobile slider/6.jpg" },
-    { name: "Sale", image: "/src/assets/Mobile slider/5.avif" },
-    { name: "Anniversary", image: "/src/assets/Mobile slider/6.jpg" },
-    { name: "Ecuadorian", image: "/src/assets/Mobile slider/7.jpg" },
-    { name: "Gifting", image: "/src/assets/Mobile slider/8.webp" },
+    { name: "All Flowers", image: imgOne },
+    { name: "Birthday", image: imgTwo },
+    { name: "Virtues Flowers", image: imgThree },
+    { name: "Luxury", image: imgFour },
+    { name: "Letter", image: imgFive },
+    { name: "Get Well", image: imgSix },
+    { name: "Sale", image: imgSeven },
+    { name: "Anniversary", image: imgEight },
+    { name: "Ecuadorian", image: imgThree },
+    { name: "Gifting", image: imgTwo },
   ];
 
   useEffect(() => {
