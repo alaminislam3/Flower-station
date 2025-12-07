@@ -1,19 +1,30 @@
 import { useState, useEffect } from "react";
 import HeroTabs from "./HeroTabs";
 import { heroData } from "./HeroData";
-import logo from "../../assets/Logo/logo.png"
+import logo from "../../assets/Logo/logo.png";
 
+// PRELOAD FUNCTION
+const preloadImages = (images) => {
+  images.forEach(src => {
+    const img = new Image();
+    img.src = src;
+  });
+};
 
 export default function HeroDesktopAndTablet() {
   const [active, setActive] = useState(0);
   const slide = heroData[active];
 
-  // Auto-change tabs every 4 seconds
+  // PRELOAD ALL IMAGES
+  useEffect(() => {
+    preloadImages(heroData.map(item => item.image));
+  }, []);
+
+  // AUTO SLIDER
   useEffect(() => {
     const interval = setInterval(() => {
       setActive((prev) => (prev + 1) % heroData.length);
     }, 4000);
-    
     return () => clearInterval(interval);
   }, []);
 
@@ -27,12 +38,9 @@ export default function HeroDesktopAndTablet() {
           style={{ background: slide.leftBg }}
         >
           <div className="flex items-start gap-6">
-            {/* Logo */}
             <img src={logo} alt="logo" className="w-20 h-20 shrink-0 hidden lg:block" />
 
-            {/* Title, Button and Text */}
             <div className="flex flex-col gap-4">
-              {/* Title */}
               <h1 
                 className="frank text-4xl font-semibold whitespace-pre-line leading-snug"
                 style={{ color: slide.titleColor }}
@@ -40,7 +48,6 @@ export default function HeroDesktopAndTablet() {
                 {slide.title}
               </h1>
 
-              {/* Button */}
               <button
                 style={{
                   background: slide.buttonBg,
@@ -54,7 +61,6 @@ export default function HeroDesktopAndTablet() {
                 {slide.buttonText}
               </button>
 
-              {/* Common text */}
               <p 
                 className="text-[15px] leading-6"
                 style={{ color: slide.descColor }}
@@ -67,14 +73,15 @@ export default function HeroDesktopAndTablet() {
         </div>
 
         {/* RIGHT IMAGE */}
-        <div className="relative h-[382px] overflow-hidden w-full  lg:w-full">
+        <div className="relative h-[382px] overflow-hidden w-full lg:w-full">
           <img
             src={slide.image}
             alt="hero"
             className="w-full h-full object-cover object-center"
+            loading="eager"
           />
-          
-          {/* TABS ON IMAGE */}
+
+          {/* TABS */}
           <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
             <HeroTabs active={active} setActive={setActive} />
           </div>
