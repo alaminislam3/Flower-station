@@ -10,7 +10,12 @@ export default function HeroMobile() {
     { name: "Birthday", image: "/src/assets/Mobile slider/2.png" },
     { name: "Virtues Flowers", image: "/src/assets/Mobile slider/3.png" },
     { name: "Luxury", image: "/src/assets/Mobile slider/4.png" },
-    { name: "Letter", image: "/src/assets/Mobile slider/5.png" },
+    { name: "Letter", image: "/src/assets/Mobile slider/5.avif" },
+    { name: "Get Well", image: "/src/assets/Mobile slider/6.jpg" },
+    { name: "Sale", image: "/src/assets/Mobile slider/5.avif" },
+    { name: "Anniversary", image: "/src/assets/Mobile slider/6.jpg" },
+    { name: "Ecuadorian", image: "/src/assets/Mobile slider/7.jpg" },
+    { name: "Gifting", image: "/src/assets/Mobile slider/8.webp" },
   ];
 
   return (
@@ -54,8 +59,8 @@ export default function HeroMobile() {
           </h1>
 
           {/* Always White Button */}
-          <button className="w-[200px] py-3 px-6 rounded font-medium shadow bg-white text-black relative z-10">
-            {slide.buttonText}
+          <button className="w-[200px] py-3 px-6 rounded font-semibold shadow bg-white text-black relative z-10">
+             All Flowers
           </button>
 
           {/* Tabs BELOW button *inside the hero image* */}
