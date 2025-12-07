@@ -77,7 +77,7 @@ function MainNavbar() {
 
 
       {/* Tablet and mobile screen */}
-      <div className="block lg:hidden my-10 mx-4">
+      <div className="block lg:hidden py-2 mx-4">
       <div className="flex justify-between items-center">
         
         {/* Left: Hamburger + Profile */}
