@@ -14,7 +14,7 @@ import imgEight from "../../assets/Mobile slider/8.webp"
 export default function HeroMobile() {
   const [active, setActive] = useState(0);
   const slide = heroData[active];
-
+   
   const categories = [
     { name: "All Flowers", image: imgOne },
     { name: "Birthday", image: imgTwo },

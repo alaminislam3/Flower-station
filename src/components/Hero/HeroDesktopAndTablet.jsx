@@ -29,39 +29,44 @@ export default function HeroDesktopAndTablet() {
   }, []);
 
   return (
-    <div className="relative w-full h-[382px]">
-      <div className="grid grid-cols-1 md:grid-cols-2 h-full">
+    <div className="relative w-full h-screen">
+
+      {/* Tablet = 50/50 | Desktop = 40/60 */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[40%_60%]">
 
         {/* LEFT PANEL */}
         <div
-          className="p-10 flex flex-col justify-center items-start gap-4 h-[382px]"
+          className="p-10 flex flex-col justify-center items-start gap-4"
           style={{ background: slide.leftBg }}
         >
           <div className="flex items-start gap-6">
-            <img src={logo} alt="logo" className="w-20 h-20 shrink-0 hidden lg:block" />
+            <img
+              src={logo}
+              alt="logo"
+              className="w-20 h-20 shrink-0 hidden lg:block"
+            />
 
             <div className="flex flex-col gap-4">
-              <h1 
+              <h1
                 className="frank text-4xl font-semibold whitespace-pre-line leading-snug"
                 style={{ color: slide.titleColor }}
               >
                 {slide.title}
               </h1>
 
+              {/* Responsive Button */}
               <button
                 style={{
                   background: slide.buttonBg,
                   color: slide.buttonTextColor,
-                  width: '316px',
-                  height: '50px',
-                  borderRadius: '2px'
+                  borderRadius: "2px",
                 }}
-                className="text-lg font-medium shadow"
+                className="text-lg font-medium shadow w-full lg:w-[316px] h-[50px]"
               >
                 {slide.buttonText}
               </button>
 
-              <p 
+              <p
                 className="text-[15px] leading-6"
                 style={{ color: slide.descColor }}
               >
@@ -73,11 +78,11 @@ export default function HeroDesktopAndTablet() {
         </div>
 
         {/* RIGHT IMAGE */}
-        <div className="relative h-[382px] overflow-hidden w-full lg:w-full">
+        <div className="relative overflow-hidden w-full">
           <img
             src={slide.image}
             alt="hero"
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-cover"
             loading="eager"
           />
 
