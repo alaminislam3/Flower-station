@@ -36,14 +36,15 @@ export default function HeroDesktopAndTablet() {
 
         {/* LEFT PANEL */}
         <div
-          className="lg:py-12 lg:pr-[100px] py-10 px-10 flex flex-col justify-center items-center gap-4"
+          className="lg:py-12 lg:pr-[100px]  py-10 px-10 flex flex-col justify-center items-center gap-4 [@media(min-width:1100px)]:pl-16"
           style={{ background: slide.leftBg }}
         >
-          <div className="flex items-start gap-6">
+          {/* logo */}
+          <div className="flex items-start gap-6 ">
             <img
               src={logo}
               alt="logo"
-              className="w-20 h-20 shrink-0 hidden lg:block"
+              className="w-20 h-20 shrink-0 hidden lg:block "
             />
 
             <div className="flex flex-col lg:gap-6 gap-4">
