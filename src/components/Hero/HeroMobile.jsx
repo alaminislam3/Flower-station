@@ -59,20 +59,20 @@ export default function HeroMobile() {
       </div>
 
       {/* HERO IMAGE */}
-      <div className="relative w-full h-[280px]">
+      <div className="relative w-full h-[350px]">
         <img
           src={slide.image}
           alt="hero"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-center"
         />
 
         {/* Dark overlay with 50% opacity */}
         <div className="absolute inset-0 bg-black/50"></div>
 
         {/* Center Content */}
-        <div className="absolute inset-0 flex flex-col  items-center">
+        <div className="absolute inset-0 flex flex-col justify-center items-center">
           {/* Fixed White Title */}
-          <h1 className="frank text-[32px] font-semibold whitespace-pre-line text-white relative z-10 mt-[37px]">
+          <h1 className="frank text-[32px] font-semibold whitespace-pre-line text-white relative z-10 ">
             {slide.title}
           </h1>
 
@@ -82,7 +82,7 @@ export default function HeroMobile() {
           </button>
 
           {/* Tabs BELOW button *inside the hero image* */}
-          <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 z-10 w-full px-4 sm:px-0 sm:w-auto ">
+          <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 z-10 w-full sm:w-auto">
             <HeroTabs active={active} setActive={setActive} />
           </div>
         </div>
