@@ -29,14 +29,14 @@ export default function HeroDesktopAndTablet() {
   }, []);
 
   return (
-    <div className="relative w-full h-screen">
+    <div className="relative w-full h-screen ">
 
       {/* Tablet = 50/50 | Desktop = 40/60 */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[40%_60%]">
+      <div className="grid grid-cols-1 md:grid-cols-[50%_50%] lg:grid-cols-[40%_60%]">
 
         {/* LEFT PANEL */}
         <div
-          className="p-10 flex flex-col justify-center items-start gap-4"
+          className="lg:py-12 lg:pr-[100px] py-10 px-10 flex flex-col justify-center items-center gap-4"
           style={{ background: slide.leftBg }}
         >
           <div className="flex items-start gap-6">
@@ -46,9 +46,9 @@ export default function HeroDesktopAndTablet() {
               className="w-20 h-20 shrink-0 hidden lg:block"
             />
 
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col lg:gap-6 gap-4">
               <h1
-                className="frank text-4xl font-semibold whitespace-pre-line leading-snug"
+                className="frank text-5xl font-semibold whitespace-pre-line "
                 style={{ color: slide.titleColor }}
               >
                 {slide.title}
@@ -61,7 +61,7 @@ export default function HeroDesktopAndTablet() {
                   color: slide.buttonTextColor,
                   borderRadius: "2px",
                 }}
-                className="text-lg font-medium shadow w-full lg:w-[316px] h-[50px]"
+                className="text-lg font-medium shadow w-full lg:w-[316px] md:h-[50px]"
               >
                 {slide.buttonText}
               </button>
@@ -78,11 +78,11 @@ export default function HeroDesktopAndTablet() {
         </div>
 
         {/* RIGHT IMAGE */}
-        <div className="relative overflow-hidden w-full">
+        <div className="relative w-full  lg:h-full overflow-hidden">
           <img
             src={slide.image}
             alt="hero"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-center"
             loading="eager"
           />
 
